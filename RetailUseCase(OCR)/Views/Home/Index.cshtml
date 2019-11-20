@@ -1,0 +1,155 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+@*<img src="https://boomi.com/wp-content/uploads/wipro-logo.jpg" width="250" height="260" align="left" />*@
+<div style="height:200px;font-size:large;border:solid;font-size:x-large">
+    <div>&nbsp;</div>
+    <h2 align="center" style="font-size:xx-large"><b>Retail Character Recognition</b></h2>
+    <br />
+    <div align="center">
+        <input type='file' id="files" style="font-size: smaller">
+        @*<br />
+            <br />*@
+        <div style="height:10px">
+           
+        </div>
+        <input type="button" id="upload" value="Upload" class="btn btn-primary btn-md" style="width:100px;font-size:15px" "  />
+
+    </div>
+    <div style="height:10px">
+        
+    </div>
+</div>
+&nbsp;
+&nbsp;
+
+<div class="row">
+    <div class="col-sm-6" style="padding-top: 10px; padding-bottom:10px;border:solid;font-size:large">
+        <h2><u>Product & Prices</u></h2>
+        <form action="/Home/TrainingForm" method="post">
+            <label>Product Name:</label>
+            <input id="Name" type="text" class="form-control" placeholder="Red Potataoes,Tomatoes etc" style="font-weight: bolder; font-size: 14px">
+            <br />
+            <label>Retail Price:</label>
+            <input id="Price" type="text" class="form-control" placeholder="$ 0" style="font-weight: bolder; font-size: 14px">
+            @*<input type="submit" class="btn btn-primary btn-md" value="Submit" style="width:100px" />*@
+            
+            <div>
+                @TempData["Message"]
+            </div>
+        </form>
+    </div>
+    <div class="col-sm-6" style="padding-top: 10px; padding-bottom:10px;border:solid;font-size:large">
+
+        <h2><u>Bar Code Reader</u></h2>
+        <div >
+            <label>Browse BarCode's Image:</label>
+            <input type='file' id="files1" style="font-size: smaller"/>
+            <form action="/Home/PredictingForm" method="post" style="padding-top:15px">
+                <input type="button" id="upload1" value="Read" class="btn btn-primary btn-md" style="width:100px;font-size:15px" />
+                @*<input type="submit" class="btn btn-primary btn-md" value="Read" style="width:100px;font-size:15px" />*@
+                <div  style="padding-top:10px"></div>
+                <input id="BarCode" type="text" class="form-control" placeholder="00000000000000" style="font-size:15px">
+            </form>
+        </div>
+        
+    </div>
+</div>
+<script>
+    $body = $("body");
+    $(document).on({
+        ajaxStart: function () { $body.addClass("loading"); },
+        ajaxStop: function () { $body.removeClass("loading"); }
+    });
+
+
+
+    $(document).ready(function () {
+        $("#upload").click(function () {
+            var data = new FormData();
+
+            //Add the Multiple selected files into the data object
+            var files = $("#files").get(0).files;
+            for (i = 0; i < files.length; i++) {
+                data.append("files" + i, files[i]);
+            }
+
+
+
+            //Post the data (files) to the server
+            if (files.length > 0) {
+                $.ajax({
+                    type: 'POST',
+                    url: "@Url.Action("Upload")",
+                    data: data,
+                    contentType: false,
+                    processData: false,
+                    success: function (data) {
+                        
+                       
+                        if (data.Validation)
+                        { alert("Extracted Details are Accurate"); }
+                        else
+                        {
+                            alert("Extracted Details are Not Accurate");
+                            return false;
+                        }
+                         $("#Price").val(data.Price);
+                        $("#Name").val(data.Productname);
+                    },
+                    error: function () {
+                        alert("An error occurred!");
+                    },
+                });
+            }
+        });
+    });
+
+
+</script>
+<script>
+    $body = $("body");
+    $(document).on({
+        ajaxStart: function () { $body.addClass("loading"); },
+        ajaxStop: function () { $body.removeClass("loading"); }
+    });
+
+
+
+    $(document).ready(function () {
+        $("#upload1").click(function () {
+            var data = new FormData();
+
+            //Add the Multiple selected files into the data object
+            var files = $("#files1").get(0).files;
+            for (i = 0; i < files.length; i++) {
+                data.append("files" + i, files[i]);
+            }
+
+
+
+            //Post the data (files) to the server
+            if (files.length > 0) {
+                $.ajax({
+                    type: 'POST',
+                    url: "@Url.Action("BarCodeUpload")",
+                    data: data,
+                    contentType: false,
+                    processData: false,
+                    success: function (data) {
+                         $("#BarCode").val(data);
+                        alert("Successfully Uploaded!");
+                    },
+                    error: function () {
+                        alert("An error occurred!");
+                    },
+                });
+            }
+        });
+    });
+
+
+</script>
+

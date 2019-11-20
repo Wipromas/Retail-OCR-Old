@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<License xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Key="RG+X1QEAjVLCnAz7wNCzX5R5WJwyPGB981hg1MHGV8eyeZCSkpRD4MjezOTP2cPqByZPPdEugyU4FzzsprQrmcCcwkV03mJX6eQtSdjNaIegwWcrG1oC8StVjYKMnouE8neHbkMRVDSEa1mY0WWbvftpnehxgSZqzESzW57ShdjGCmCgvv1FH8oJ7yCwf6i1AwA+zU4s2aHne+gpBvGVnLfRmcoxqzg0dqNs6aClTMKwDeQeu6jV4RZMVyzP64gWhnj0AuvVwVquYzMkfln7KSJyrMmuxgsq9RLMoXA3pxGiQptMSArRx2N1JXJGmPpYB6NvW3kGDbkU61iceTB1Ri/k4aCk3WNSyuPSe6+qtwgGObfLOijroINCXf9+RTFV1/SapeJHed/ELt7yWoUcX5M5MRVhBSWZiwYwMclw/0EeR2pQb0xl4SyI4NFmVCcd1LiBImiS1hdckKVtLh9/TvA5GQBm5huU3ykK+efMdf6dc0nFpqiHErl4t2x0CXaY3niD+RfviMiiWFDMw+tSBEeywsya3XJ1Rb7yjIt4znLMi0OSwNUS3VMDiNtwCItTkqFM8aGKEHhwLsufwE5S2pMxDEYiSV0C31z0Bq0NbI370FGflwzTmJKEzm1NlmcWfxmOfTpIcbHvCZUI0ulI5EWI390WRAEu18F6Qhex3cV5XddfejLCRfePYoEGO1l33rbjigy58gjDThG5xoJao4V+//9buOyMEbJhnct0LVdLYybWwudJjKMBCOBWfsp0Z0QJYUb8wXisostEd5BLdBckvgmaS7uGuMFSW8nlKURdsS7sPfcCexUZXGEabc0CXRigcanjDma48m5o+94mLsQGRp2BdPjwRoNE4HP1lo4IJXR26LOaWVtCIx93KKxoQuX9vA4cnaSFilKY5BwUdjoSiEgTOAWpw51tKFKcxNeH0rwFO7ZVZ9l7N4N3qDTcEjL+xHu5jUAzIxkK6gkc+ZrlO+0JrAtHSVYRi/saLi8DESlfL9pXZVYWnrSKFkpyz3B046UxFNTyAQdOFXoMF49H6z6cB9TQZPWTjt/qAy2YdpgU9r0nLpDvKNM37EsJwM1YP5IzICSHOGczi42Aqqfu12AJuxUsKPjHXgR0dRwSW1lF91nV5Jvdqj1mju8tXvuP6BSeI2umszfrJHOG5aXcFNMFXj97fFMz2IVUZCgBFiZhMNsFPEPKkYbmz1ozGVKQK2LcXY2i/4tSXIP/Aq+yj8MdKtUsEdrjVVTo6AjRZeYcY6nG0XIy/NunEUUH0LTrnrNr9xtyPXnDWBCykx/ELaweY1MxdOP72Zfm74CpmkbP6P96rWUGcrmA7OJOzbPVmxtTvzLqFhAXHqxiN91toLd1xkcdHpz7a5aLqVVnOGIe1k9rtmJ4HAzNr/CJD25ZYy2pVpQxs9uptwUeHgtrB8GGuLE9" Version="1.3">
+	<Type>Temporary</Type>
+	<Username>vishal.lavania</Username>
+	<Email>vishal.lavania1@wipro.com</Email>
+	<LicensedDate>2019-11-19T00:00:00Z</LicensedDate>
+	<ExpiredDate>2020-01-09T00:00:00Z</ExpiredDate>
+	<Products>
+		<Product>
+			<Name>Spire.Barcode for .NET</Name>
+			<Version>3.5</Version>
+			<Subscription>
+				<NumberOfPermittedDeveloper>1</NumberOfPermittedDeveloper>
+				<NumberOfPermittedSite>1</NumberOfPermittedSite>
+			</Subscription>
+		</Product>
+	</Products>
+	<Issuer>
+		<Name>e-iceblue</Name>
+		<Email>sales@e-iceblue.com</Email>
+		<Url>http://www.e-iceblue.com</Url>
+	</Issuer>
+</License>
